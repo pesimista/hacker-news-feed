@@ -1,14 +1,24 @@
+image: node:latest
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
 
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - .npm/
+
+before_script:
+  - cd rest-api
+  - npm ci --cache .npm --prefer-offline
+
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - npm install
     - echo "Compiling the code..."
-    - npm build
+    - npm run build
     - echo "Compile complete."
 
 unit-test-job:   # This job runs in the test stage.
