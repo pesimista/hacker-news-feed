@@ -1,0 +1,36 @@
+<div class="main">
+  <section class="header">
+    <div>
+      <h2>HN Feed</h2>
+      <h6>
+        We &lt;3 hacker news!
+        <button style="float: right" (click)="fetchData()">
+          <i class="fa fa-refresh"></i>
+        </button>
+      </h6>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <article *ngFor="let item of items">
+        <a [href]="item.story_url" target="_blank" class="title">
+          <p>
+            {{ item.story_title ?? item.title }}
+            <span class="author"> - {{ item.author }} </span>
+          </p>
+        </a>
+        <div class="date">
+          <p>
+            {{ item.createdAt | since: now }}
+          </p>
+        </div>
+        <div class="button">
+          <button (click)="hideArticle(item)">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
