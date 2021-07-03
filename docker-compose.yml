@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  client:
+    environment:
+      - API_HOST=backend:3001
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    container_name: client
+    ports:
+      - 4201:80
+    links:
+      - backend
+
+  backend:
+    environment:
+      - ENVIRONMENT=prod
+    build:
+      context: ./rest-api/
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - 3001:3001
+    volumes:
+      - ./config:/root/config
+    links:
+      - mongo
+    # volumes:
+    #   - .:/user/src/app
+
+  mongo:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - 27018:27017
+    logging:
+      driver: "none"
