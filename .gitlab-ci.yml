@@ -1,5 +1,4 @@
 include:
   - local: '/rest-api/.gitlab-ci.yml'
-
-include:
   - local: '/client/.gitlab-ci.yml'
+
