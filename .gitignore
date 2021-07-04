@@ -162,6 +162,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
+# **/junit.xml
 # End of https://www.toptal.com/developers/gitignore/api/angular,node
 

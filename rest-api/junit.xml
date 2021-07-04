@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="19" failures="0" errors="0" time="9.375">
+  <testsuite name="ArticleController" errors="0" failures="0" skipped="0" timestamp="2021-07-04T00:41:41" time="4.112" tests="4">
+    <testcase classname="ArticleController should be defined" name="ArticleController should be defined" time="0.026">
+    </testcase>
+    <testcase classname="ArticleController #findAll should return an array" name="ArticleController #findAll should return an array" time="0.01">
+    </testcase>
+    <testcase classname="ArticleController #findOne should return a single item" name="ArticleController #findOne should return a single item" time="0.007">
+    </testcase>
+    <testcase classname="ArticleController #remove should return true after updating the database" name="ArticleController #remove should return true after updating the database" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="TasksService" errors="0" failures="0" skipped="0" timestamp="2021-07-04T00:41:41" time="4.177" tests="4">
+    <testcase classname="TasksService should be defined" name="TasksService should be defined" time="0.025">
+    </testcase>
+    <testcase classname="TasksService #handleUpdate should return true after updating the database" name="TasksService #handleUpdate should return true after updating the database" time="0.052">
+    </testcase>
+    <testcase classname="TasksService #handleUpdate should throw an error" name="TasksService #handleUpdate should throw an error" time="0.009">
+    </testcase>
+    <testcase classname="TasksService #onModuleInit should return true" name="TasksService #onModuleInit should return true" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="ArticleService" errors="0" failures="0" skipped="0" timestamp="2021-07-04T00:41:41" time="4.214" tests="9">
+    <testcase classname="ArticleService should be defined" name="ArticleService should be defined" time="0.027">
+    </testcase>
+    <testcase classname="ArticleService #findAll should return an array with two objects" name="ArticleService #findAll should return an array with two objects" time="0.008">
+    </testcase>
+    <testcase classname="ArticleService #findOne should return only one object" name="ArticleService #findOne should return only one object" time="0.008">
+    </testcase>
+    <testcase classname="ArticleService #findOne should throw and catch an error if theres no item with the given id" name="ArticleService #findOne should throw and catch an error if theres no item with the given id" time="0.039">
+    </testcase>
+    <testcase classname="ArticleService #remove should return true after setting the entry as hidden" name="ArticleService #remove should return true after setting the entry as hidden" time="0.005">
+    </testcase>
+    <testcase classname="ArticleService #remove should throw and catch an error" name="ArticleService #remove should throw and catch an error" time="0.004">
+    </testcase>
+    <testcase classname="ArticleService #updateEntry should throw and catch an error" name="ArticleService #updateEntry should throw and catch an error" time="0.008">
+    </testcase>
+    <testcase classname="ArticleService #updateDatabase should return after fetching and updatings the entries" name="ArticleService #updateDatabase should return after fetching and updatings the entries" time="0.006">
+    </testcase>
+    <testcase classname="ArticleService #updateDatabase should return false if an error occurs" name="ArticleService #updateDatabase should return false if an error occurs" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppController" errors="0" failures="0" skipped="0" timestamp="2021-07-04T00:41:41" time="6.046" tests="2">
+    <testcase classname="AppController root should return &quot;Hello World!&quot;" name="AppController root should return &quot;Hello World!&quot;" time="0.011">
+    </testcase>
+    <testcase classname="AppController should return the config data" name="AppController should return the config data" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
